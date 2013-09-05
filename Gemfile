@@ -1,3 +1,5 @@
+source 'http://rubygems.org'
+
 ruby '1.9.2'
 
 gem 'rails', '3.1.0'
@@ -9,16 +11,17 @@ group :development do
   gem 'sqlite3'
 end
 
-group :doc do
-  gem 'sdoc'
-end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'jquery-rails'
@@ -36,3 +39,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+
